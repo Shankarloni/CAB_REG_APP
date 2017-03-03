@@ -1,0 +1,39 @@
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="nav1">
+    <center>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>From Date</th>
+                    <th> To Date</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+
+                  <td><input ng-model="date.dates"  type="date"></td>
+
+                  <td><input ng-model="date.dates"  type="date"></td>
+
+                    <td><button ng-click="adddate(date)" class="btn btn-primary">Add</button></td>
+
+
+
+                </tr>
+                <tr ng-repeat="date in dateList">
+
+                    <td>{{ date.dates }}</td>
+                    <td><button ng-click="removeShowtime(date)" class="btn btn-danger">Remove</button></td>
+
+
+                </tr>
+            </tbody>
+        </table>
+    </center>

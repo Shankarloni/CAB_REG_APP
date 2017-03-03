@@ -1,0 +1,72 @@
+
+<br><br><br><br>
+
+<div class="col-xs-4 well">
+
+        <h5 style="color:#3679e2"> Your seats are Successfully Booked...</h5>
+
+        <div ng-repeat="j in movi">
+                <p>Movie Name :{{j.moviTitle}}</p>
+                <p>Genre - {{j.moviGenre}}</p>
+                <p>Language - {{j.moviLanguage}}</p>
+              </div>
+
+      <div>
+      Class       : <p id="cls"></p>
+      No.Of Seats : <p id="nOfS"></p>
+      total Amount: <p id="Amt"></p>
+      </div>
+
+
+
+
+
+        <h5 style="color:#3679e2">Fill Your Details and pay Here
+
+        <img src="img/016_-_hand_arrow-512.png" hight="50%" width="50%"></h5>
+</div>
+<div  class="container">
+
+      <div class="col-sm-8">
+        <div class="well well-sm">
+        <div >
+          <h4 font wight:"bold">Personal Details :
+    </h4></div>
+    <form role="form">
+    <div>
+      <label>NAME:</label>
+      <td><input type="text"  placeholder="Name" class="form-control" id="name" name="name" ng-model="dtl.dName" /></td>
+      <label>Email:</label>
+      <td><input type="email" placeholder="abc@gmail.com" id="emailid" name="emailid"  class="form-control" ng-model="dtl.dEmail" /></td>
+      <label>Mobile no.:</label>
+      <td><input type="text" placeholder="+919665634945"  id="numb" name="phoneno"  class="form-control" maxlength="11" minlength="10" ng-model="dtl.dMobile" /></td>
+
+        <br><br><br>
+
+        <div>
+          ------------------------------------------------------------------------------------------------------------------------------------
+        </div>
+
+        <h4  font wight:"bold">Payment Details :</h4>
+        <form>
+          <form><label>Select A Bank</label>
+          <select  ng-model="dtl.dpayd">
+            <option>Bank of india</option>
+            <option>Bank Maharastra </option>
+            <option>Yes Bank</option>
+            <option>Fedral Bank </option>
+            <option>Indusind Bank </option>
+            <option>Bank of Borada</option>
+            <option>HDFC</option>
+            <option>Gujarat Bank</option>
+            </select>
+        </form>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br><br>
+            <label>Card No:</label>
+            <td><input type="text" class="form-control" id="cno" placeholder="xxxx-xxxx-xxxx-xxxx" maxlength="16" minlength="16" ng-model="dtl.dCard" /></td>
+            <br><br>
+            <td><button ng-click="addPaymentdetail(dtl)"  class="btn btn-primary">Submit</button></td>
+</div>
+</div>
+
+<center><a href="#/feedback" class="button-color btn btn-primary" role="button">One step More </a></center>
+<br>

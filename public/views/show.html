@@ -1,0 +1,69 @@
+
+
+
+<br><br><br><br>
+
+
+  <div class="col-sm-6">
+<div ng-repeat="j in movi">
+<div class="well">
+  <h3>{{j.moviTitle}}</h3>
+
+  <img ng-src="{{j.moviPoster}}" alt="POSTER"  width="250" height="350"  >
+  <h4>Director - {{j.moviDirector}}</h4>
+  <h4>Actor - {{j.moviActors}}</h4>
+  <h4>Genre - {{j.moviGenre}}</h4>
+  <h4>Language - {{j.moviLanguage}}</h4>
+
+<br>
+</div>
+</div>
+</div>
+
+
+<div class="container">
+<div class="col-xs-6 well">
+<div class="row">
+  <h4>Select City</h4>
+
+    <select ng-model="mapp.City">
+      <option ng-repeat="c in mapping | filter: mapp.Theatre">{{c.City}}</option>
+    </select>
+
+
+
+  <h4>Select Date</h4>
+    <select ng-model="mapp.Date">
+      <option ng-repeat="c in movieDates">{{c|date:'dd,MM,yyyy'}}</option>
+    </select>
+      </div>
+
+
+
+<br><br>
+
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+      <th>Theatre</th>
+      <th>Date</th>
+      <th>Showtime</th>
+    </tr>
+  </thead>
+    <tr ng-show="mapp.Date"  ng-repeat="b in booking | filter : mapp.City">
+
+
+      <td>{{b.Theatre}}</td>
+      <td>{{b.Date}}</td>
+      <td>{{b.ShowtimeTime}}<td>
+      <center><a href="#/seats" ng-click="setShow()" class="button-color btn btn-primary" role="button">Proceed</a></center>
+    </tr>
+    </table>
+
+
+  </div>
+  </div>
+    </div>
+
+
+<br>

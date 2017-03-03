@@ -1,0 +1,32 @@
+<br>
+<br>
+<br>
+<br>
+<div>
+    <center>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Enter the city name:</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+
+
+                    <td><input ng-model="cit.citName" /></td>
+                    <td><button ng-click="addCity(cit)" class="btn btn-primary">Add </button></td>
+                    <td><button ng-click="updateCity(cit)" class="btn btn-primary">Update</button></td>
+
+                </tr>
+                <tr ng-repeat=" cit in citList">
+                    <td>{{cit.citName}}</td>
+
+                    <td><button ng-click="removeCity(cit)" class="btn btn-danger">Remove</button></td>
+                    <td><button ng-click="editCity(cit)" class="btn btn-info">Edit</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </center>

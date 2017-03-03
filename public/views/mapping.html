@@ -1,0 +1,113 @@
+<br><br><br>
+<br><br><br>
+<div class="container">
+  <center>
+    <div class="row">
+      <div class="col-lg-12">
+        <h1>ADMIN PANNEL: ENTER DETAILS </h1>
+      </div>
+<div class="nav_admin">
+    <!-- <center> -->
+        <table height="100%" weight="100%" class="table table-condensed table-bordered ">
+          <tbody>
+                <tr>
+                  <th>
+                    CITY
+                  </th>
+                    <td colspan="2">
+                      <div>
+                      <select ng-model="mapp.City">
+                        <option ng-repeat="cit in cityList ">{{cit.citName}}</option>
+                      </select>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                  <th>
+                    THEATRE
+                  </th>
+                  <td colspan="2">
+                    <div>
+                    <select ng-model="mapp.Theatre">
+                      <option ng-repeat="theatre in theatreList | filter: mapp.City">{{theatre.theatreName}}</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  MOVIE
+                </th>
+                <td colspan="2">
+                  <div>
+                    <select ng-model="mapp.Movie">
+                      <option ng-repeat="movi in movieList">{{movi.moviTitle}}</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  SHOWTIME
+                </th>
+                <div>
+                  <td colspan="2">
+                      <select ng-model="mapp.ShowtimeTime">
+                        <option ng-repeat=" showtime in showtimeList">{{showtime.showtimeTime | date:'HH:mm a'}}</option>
+                      </select>
+                    </td>
+                  </div>
+                </tr>
+
+                <tr>
+                  <th>
+                   Date
+                  </th>
+                     <div>
+                        <td><input type="date"  ng-model="mapp.Date"></td>
+
+                      </div>
+                    </td>
+                </tr>
+
+
+
+                </tbody>
+              </table>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                  <button ng-click="addMapping(mapp)" class="btn btn-primary btn-lg" style="padding:10px 50px">Add Details</button>
+                </div>
+              </div>
+              <br>
+            <div class="col-lg-12">
+              <table class="table table-bordered ">
+                <thead>
+              <th>CITY</th>
+              <th>THEATRE</th>
+              <th>MOVIE</th>
+              <th>ShowTime</th>
+              <th>DATE</th>
+
+          </thead>
+          <tbody>
+                <tr ng-repeat="mapp in mapList">
+                    <td>{{mapp.City}}</td>
+                    <td>{{mapp.Theatre}}</td>
+                    <td>{{mapp.Movie}}</td>
+                    <td>{{mapp.ShowtimeTime}}</td>
+                    <td>{{mapp.Date | date:'dd,MM yyyy'}}</td>
+
+
+                    <td><button ng-click="removeMapping(mapp)" class="btn btn-danger">Remove</button></td>
+
+                </tr>
+
+              </tbody>
+        </table>
+      </center>
+      </div>
+</div>
+</div>
+</div>

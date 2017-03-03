@@ -1,0 +1,42 @@
+<table class="table table-striped">
+  <thead>
+    <th>title</th>
+    <th>URL</th>
+  </thead>
+  <tbody>
+<tr ng-repeat="trailer in trailers">
+  <td>{{trailer.title}}</td>
+  <td>{{triler.url}}</td>
+</tr>
+  <tbody>
+  </table>
+
+<!--function validate()
+{
+  var name= document.getElementById("name").value;
+    var emailid= document.getElementById("emailid").value;
+      var numb=document.getElementById("numb").value;
+
+      var emailreg =[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$
+
+      if(name!="" && emailid!="" && numb!="")
+      {
+        if (emailid.match(emailreg))
+        {
+          if(contact.lenth==10)
+          {
+            alert("form seccesively filled");
+            return true;
+            }
+          else
+          {
+            alert("Entere valid contact no.")
+            return false;
+          }
+          }
+      }
+
+else{
+  alert("all fields are reuired");
+  return false;
+}

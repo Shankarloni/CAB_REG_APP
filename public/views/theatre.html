@@ -1,0 +1,56 @@
+<br>
+<br>
+<br>
+
+<div class="nav1">
+    <center>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Theatre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+
+                    <div>
+                      <th>city<th>
+                      <select ng-model="theatre.theatreCity">
+                        <option ng-repeat="cit in cityList" >{{ cit.citName }}</option>
+                      </div>
+
+        <!--        <div ng-app="movieApp" ng-controller="CityController">
+                   City  :<select id="citySelect">
+                    <option ng-repeat="cit in citList" >{{ cit.citName }}</option>
+                </select>
+                </div>
+              </th>
+
+        <!--      <th>
+                <div ng-app="movieApp" ng-controller="SeattypeController">
+                   Seat-type :<select id="seattypeSelect">
+                    <option ng-repeat="seattype in seatList">{{seat.seatName}}</option>
+                  </select>
+                </div>
+              </th>-->
+
+                <th> Theatre<input ng-model="theatre.theatreName " /><th>
+                    <th><button ng-click="addTheatre(theatre)" class="btn btn-primary">Add</button></th>
+
+                    <th><button ng-click="updateTheatre(theatre)"  class="btn btn-primary">Update</button></th>
+
+
+                </tr>
+
+                <tr ng-repeat=" theatre in theatreList">
+                    <td>{{theatre.theatreCity}}</td>
+            <!--        <td>{{ theatre.theatreSeattype}}</td> -->
+                    <td>{{ theatre.theatreName }}</td>
+
+                    <td><button ng-click="removeTheatre(theatre)" class="btn btn-danger">Remove</button></td>
+                    <td><button ng-click="editTheatre(theatre)" class="btn btn-primary">Edit</button></td>
+                 </tr>
+            </tbody>
+        </table>
+    </center>
